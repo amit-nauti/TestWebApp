@@ -25,8 +25,6 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: set up nuget
       uses: NuGet/setup-nuget@v1.0.2
-    - name: restore nuget packages
-      uses: nuget restore TestWebApp.sln
     - name: build web app
       uses: msbuild TestWebApp.sln /p:Configuration=Release /p:DeployOnBuild=true
     - name: upload artifact
